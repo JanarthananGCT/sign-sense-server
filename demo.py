@@ -9,7 +9,7 @@ import operator
 
 from string import ascii_uppercase
 
-import tkinter as tk
+# import tkinter as tk
 from PIL import Image, ImageTk
 
 from keras.models import model_from_json
@@ -57,37 +57,37 @@ class Application:
         
         print("Loaded model from disk")
 
-        self.root = tk.Tk()
-        self.root.title("Sign Language To Text Conversion")
-        self.root.protocol('WM_DELETE_WINDOW', self.destructor)
-        self.root.geometry("900x900")
+        # self.root = tk.Tk()
+        # self.root.title("Sign Language To Text Conversion")
+        # self.root.protocol('WM_DELETE_WINDOW', self.destructor)
+        # self.root.geometry("900x900")
 
-        self.panel = tk.Label(self.root)
-        self.panel.place(x = 100, y = 10, width = 580, height = 580)
+        # self.panel = tk.Label(self.root)
+        # self.panel.place(x = 100, y = 10, width = 580, height = 580)
         
-        self.panel2 = tk.Label(self.root) # initialize image panel
-        self.panel2.place(x = 400, y = 65, width = 275, height = 275)
+        # self.panel2 = tk.Label(self.root) # initialize image panel
+        # self.panel2.place(x = 400, y = 65, width = 275, height = 275)
 
-        self.T = tk.Label(self.root)
-        self.T.place(x = 60, y = 5)
-        self.T.config(text = "Sign Language To Text Conversion", font = ("Courier", 30, "bold"))
+        # self.T = tk.Label(self.root)
+        # self.T.place(x = 60, y = 5)
+        # self.T.config(text = "Sign Language To Text Conversion", font = ("Courier", 30, "bold"))
 
-        self.panel3 = tk.Label(self.root) # Current Symbol
-        self.panel3.place(x = 500, y = 540)
+        # self.panel3 = tk.Label(self.root) # Current Symbol
+        # self.panel3.place(x = 500, y = 540)
 
-        self.T1 = tk.Label(self.root)
-        self.T1.place(x = 10, y = 540)
-        self.T1.config(text = "Character :", font = ("Courier", 30, "bold"))
+        # self.T1 = tk.Label(self.root)
+        # self.T1.place(x = 10, y = 540)
+        # self.T1.config(text = "Character :", font = ("Courier", 30, "bold"))
 
-        self.panel4 = tk.Label(self.root) # Word
-        self.panel4.place(x = 220, y = 595)
+        # self.panel4 = tk.Label(self.root) # Word
+        # self.panel4.place(x = 220, y = 595)
 
-        self.T2 = tk.Label(self.root)
-        self.T2.place(x = 10,y = 595)
-        self.T2.config(text = "Word :", font = ("Courier", 30, "bold"))
+        # self.T2 = tk.Label(self.root)
+        # self.T2.place(x = 10,y = 595)
+        # self.T2.config(text = "Word :", font = ("Courier", 30, "bold"))
 
-        self.panel5 = tk.Label(self.root) # Sentence
-        self.panel5.place(x = 350, y = 645)
+        # self.panel5 = tk.Label(self.root) # Sentence
+        # self.panel5.place(x = 350, y = 645)
 
         # self.T3 = tk.Label(self.root)
         # self.T3.place(x = 10, y = 645)
