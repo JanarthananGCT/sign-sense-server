@@ -301,7 +301,7 @@ class Application:
 # print("Starting Application...")
 
 # (Application()).root.mainloop()
-@app.route('/video_feed')
+@app.route('/')
 def index():
     return "Hello"
 
