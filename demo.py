@@ -301,6 +301,9 @@ class Application:
 # print("Starting Application...")
 
 # (Application()).root.mainloop()
+@app.route('/video_feed')
+def index():
+    return "Hello"
 
 @app.route('/video_feed')
 def video_feed():
@@ -309,4 +312,4 @@ def video_feed():
     return res
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run()
