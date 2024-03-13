@@ -12,15 +12,12 @@ from string import ascii_uppercase
 import tkinter as tk
 from PIL import Image, ImageTk
 
-import enchant
-
 from keras.models import model_from_json
 
 
 app = Flask(__name__)
 class Application:
     def __init__(self):
-        self.hs =  enchant.Dict("en_US")
         self.vs = cv2.VideoCapture("video1.mp4")
         self.current_image = None
         self.current_image2 = None
@@ -292,54 +289,6 @@ class Application:
                 print(self.word)
         return self.cword
 
-    def action1(self):
-
-        predicts = self.hs.suggest(self.word)
-
-        if(len(predicts) > 0):
-
-            self.word = ""
-
-            self.str += " "
-
-            self.str += predicts[0]
-
-    def action2(self):
-
-        predicts = self.hs.suggest(self.word)
-
-        if(len(predicts) > 1):
-            self.word = ""
-            self.str += " "
-            self.str += predicts[1]
-
-    def action3(self):
-
-        predicts = self.hs.suggest(self.word)
-
-        if(len(predicts) > 2):
-            self.word = ""
-            self.str += " "
-            self.str += predicts[2]
-
-    def action4(self):
-
-        predicts = self.hs.suggest(self.word)
-
-        if(len(predicts) > 3):
-            self.word = ""
-            self.str += " "
-            self.str += predicts[3]
-
-    def action5(self):
-
-        predicts = self.hs.suggest(self.word)
-
-        if(len(predicts) > 4):
-            self.word = ""
-            self.str += " "
-            self.str += predicts[4]
-        
             
     def destructor(self):
 
